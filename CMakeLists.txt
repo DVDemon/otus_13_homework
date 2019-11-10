@@ -17,7 +17,7 @@ add_executable(join_server main.cpp parser.cpp database.cpp server.cpp session.c
 set_target_properties(join_server PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON)
 
 target_include_directories(join_server PRIVATE "${CMAKE_BINARY_DIR}")
-target_link_libraries(join_server PRIVATE ${CMAKE_THREAD_LIBS_INIT}  ${Boost_LIBRARIES})
+target_link_libraries(join_server PRIVATE ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})
 
 #target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic -Werror )
 
