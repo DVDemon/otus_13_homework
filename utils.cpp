@@ -1,4 +1,5 @@
 #include "utils.h"
+#include <algorithm>
 
 bool is_integer(const std::string& s)
 {

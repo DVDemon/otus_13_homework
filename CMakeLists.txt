@@ -6,6 +6,8 @@ else()
  project(13_homework VERSION 0.0.3)
 endif()
 
+#SET(CMAKE_CXX_COMPILER /usr/local/Cellar/gcc/HEAD-f2787da/bin/c++-HEAD)
+
 find_package(Threads)
 find_package(Boost COMPONENTS system regex REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
@@ -17,7 +19,7 @@ set_target_properties(join_server PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIR
 target_include_directories(join_server PRIVATE "${CMAKE_BINARY_DIR}")
 target_link_libraries(join_server PRIVATE ${CMAKE_THREAD_LIBS_INIT}  ${Boost_LIBRARIES})
 
-target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic -Werror )
+#target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic -Werror )
 
 install(TARGETS join_server RUNTIME DESTINATION bin)
 
